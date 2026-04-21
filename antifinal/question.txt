@@ -1,0 +1,10 @@
+Quel est le metier de J. Robert Oppenheimer ?;Physicien théoricien;Ingénieur civil;1;1
+Quel projet scientifique dirige Oppenheimer ?;Projet Manhattan;Projet Apollo;1;2
+Dans quel lieu principal se déroule le développement de la bombe ?;Los Alamos;Chicago;1;3
+Quel acteur incarne Oppenheimer dans le film ?;Cillian Murphy;Leonardo DiCaprio;1;4
+Qui a réalisé le film Oppenheimer (2023) ?;Christopher Nolan;Steven Spielberg;1;5
+Quelle arme est développée dans le film ?;Bombe atomique;Missile balistique;1;6
+Quel président américain autorise l'utilisation de la bombe ?;Harry Truman;John F. Kennedy;1;7
+Quel scientifique est souvent associé à la bombe H dans le film ?;Edward Teller;Isaac Newton;1;8
+Quel est le nom du premier test nucléaire ?;Trinity;Apollo;1;9
+Quelle relation personnelle importante est montrée dans le film ?;Sa relation avec Kitty;Sa relation avec sa sœur;1;10
