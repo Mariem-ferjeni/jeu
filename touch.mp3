@@ -1,0 +1,63 @@
+
+#ifndef ENNEMI_H_INCLUDED
+#define ENNEMI_H_INCLUDED
+
+#include <stdio.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
+#include <SDL2/SDL_ttf.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+typedef struct {
+    SDL_Texture *textures[5];
+    int frameActuelle;
+    int compteurAnimation;
+    SDL_Rect posEnnemi;
+    SDL_Rect posDepart;
+    SDL_Rect posArrivee;
+    int direction;
+    int vitesse;
+    int vitesseOriginale;
+    int vie;
+    int actif;
+    int degats;
+    int niveau;
+    float angleVague;
+    int clignotement;
+    int tempsDernierDegat;
+    int etatIA;           // 0=attente, 1=poursuite, 2=attaque
+    int tempsChangement;  // Pour changer de comportement
+} Ennemi;
+
+typedef struct {
+    SDL_Rect poshero;
+    SDL_Texture* texture;
+    int vie;
+    int invincible;
+    int lastHit;
+} perso;
+
+typedef struct {
+    SDL_Rect rect;
+    SDL_Texture* texture;
+    int actif;
+    int respawnTimer;
+    int vitesseY;
+} Coin;
+
+void initEnnemi(Ennemi *e);
+void chargerTextures(Ennemi *e, SDL_Renderer *renderer);
+void afficherEnnemi(Ennemi e, SDL_Renderer *renderer);
+void updateEnnemi(Ennemi *e);
+void ennemietat(Ennemi *e, int degats);
+int collisionBB(perso p, Ennemi e);
+void gererCollision(perso *p, Ennemi *e, Coin *coin);
+void afficherTexte(SDL_Renderer *renderer, TTF_Font *police, char *texte, int x, int y, SDL_Color couleur);
+void deplacerIA(Ennemi *e, int joueurX, int joueurY);  // NOUVELLE FONCTION IA
+
+#endif
+
+
